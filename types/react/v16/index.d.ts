@@ -918,7 +918,7 @@ declare namespace React {
      * @version 16.8.0
      * @see https://react.dev/reference/react/useState
      */
-    function useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
+    function useState<S>(initialState: S | (() => S)): readonly [S, Dispatch<SetStateAction<S>>];
     // convenience overload when first argument is omitted
     /**
      * Returns a stateful value, and a function to update it.
@@ -926,7 +926,7 @@ declare namespace React {
      * @version 16.8.0
      * @see https://react.dev/reference/react/useState
      */
-    function useState<S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>];
+    function useState<S = undefined>(): readonly [S | undefined, Dispatch<SetStateAction<S | undefined>>];
     /**
      * An alternative to `useState`.
      *
